@@ -1,9 +1,8 @@
 #A program to print whether the entered number is even or odd.
 
-#Logic 1:
-
 n=int(input("Enter a number: "))
 if n%2==0:
   print("The entered number is an even number.")
 else:
   print("The entered number is an odd number.")
+

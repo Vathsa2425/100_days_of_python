@@ -1,1 +1,89 @@
 #Program to find area of selected shape
+
+shape=input("Select a shape from the follwing shapes: square, rectangle, circle, right triangle, isoceles triangle, cone, cylinder, sphere, cube, cuboid: ")
+
+if shape=='square':
+    s=int(input("Enter the value of side of the square: "))
+    area1=s*s
+    print("The area of the square is=", area1)
+
+elif shape=='rectangle':
+    l=int(input("Enter the length of the rectangle: "))
+    b=int(input("Enter the breadth of the rectangle: "))
+    area2=l*b
+    print("The area of the rectangle is=", area2)
+
+elif shape=='circle':
+    pi=3.14
+    r=int(input("Enter the radius of the circle: "))
+    area3=pi*r*r
+    print("The area of the circle is=", area3)
+
+elif shape=='right triangle':
+    height=int(input("Enter the value of base of triangle: "))
+    base=int(input("Enter the value of height of triangle: "))
+    area4=1/2*height*base
+    print("The area of the right triangle is=", area4)
+
+elif shape=='cone':
+    pi=3.14
+    area5=input("Do you want to calculate csa [curved surface area] or tsa [total surface area]? :")
+    if area5=='csa':
+        radius=int(input("Enter the radius of the cone: "))
+        length=int(input("Enter the length of the cone: "))
+        csa=pi*radius*length
+        print("The curved surface area of the cone is=", csa)
+    else:
+        length=int(input("Enter the length of the cone: "))
+        radius=int(input("Enter the radius of the cone: "))
+        tsa=(pi*radius*length)+(pi*radius*radius)
+        print("The total surface area of the cone is=", tsa)
+
+elif shape=='cylinder':
+    pi=3.14
+    area6=input("Do you want to calculate CSA [curved surface area] or TSA [total surface area]? :")
+    if area6=='CSA':
+        radius1=int(input("Enter the radius of the cylinder: "))
+        height=int(input("Enter the height of the cylinder: "))
+        CSA=2*pi*radius1*height
+        print("The area of the cylinder is=", CSA)
+    else:
+        radius1=int(input("Enter the radius of the cylinder: "))
+        height=int(input("Enter the height of the cylinder: "))
+        TSA=2*pi*radius1*(radius1+height)
+        print("The area of the cylinder is=", TSA)
+
+elif shape=='sphere':
+    pi=3.14
+    rad=int(input("Enter the radius of the sphere: "))
+    area7=4*pi*rad*rad
+    print("The area of the sphere is=", area7)
+#The area of hemisphere is half the area of sphere, ie 2*pi*r*r
+
+elif shape=='cube':
+    area8=input("Do you want to calculate the lsa1[lateral surface area] or tsa2[total surface area]?: ")
+    if area8=='tsa2':
+     side=int(input("Enter the value of side of cube"))
+     tsa2=6*side*side
+     print("The total surface area of the cube is=", tsa2)
+    else:
+        side=int(input("Enter the length of the side of the cube: "))
+        lsa1=4*side*side
+        print("The lateral surface area of the cube is: ", lsa1)         
+    
+
+else:
+    area9=input("Do you want to calculate the lsa[lateral surface area] or tsa1[total surface area]?: ")
+    if area9=='lsa':
+        Length=int(input("Enter the length of the cuboid: "))
+        Height=int(input("Enter the height of the cuboid: "))
+        Breadth=int(input("Enter the breadth of the cuboid: "))
+        lsa=2*Height*(Length+Breadth)
+        print("The lateral surface area of the cuboid is=", lsa)
+
+    else:
+        Length=int(input("Enter the length of the cuboid: "))
+        Height=int(input("Enter the height of the cuboid: "))
+        Breadth=int(input("Enter the breadth of the cuboid: "))
+        tsa1=2*(Length*Breadth)+(Breadth*Height)+(Height*Length)
+        print("The total surface area of the cuboid is=", tsa1)
